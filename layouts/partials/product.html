@@ -1,0 +1,16 @@
+<div class="product">
+  <div class="product-image">
+    <img src="{{.Params.image}}" alt="{{.Params.name}}">
+  </div>
+  <h5 class="product-name">{{.Params.name}}</h5>
+  <p class="product-description">{{.Params.description}}</p>
+  <button class="snipcart-add-item"
+    data-item-id={{.Params.id}}
+    data-item-name="{{.Params.name}}"
+    data-item-price={{.Params.price}}
+    data-item-description="{{.Params.description}}"
+    data-item-url="{{.Params.url}}"
+    data-item-image="{{.Params.image}}">
+      Add to Cart
+  </button>
+</div>
