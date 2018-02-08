@@ -20,7 +20,7 @@ collections:
         widget: "string"
 
       - label: "Name"
-        name: "title"
+        name: "name"
         widget: "string"
 
       - label: "Price"
@@ -33,7 +33,7 @@ collections:
         name: "image"
         widget: "image"
         default: "/uploads/lovelee-rolls-logo-square.jpg"
-        
+
       - label: "Description"
         name: "description"
         widget: "text"
