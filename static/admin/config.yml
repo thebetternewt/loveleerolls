@@ -15,8 +15,8 @@ collections:
     folder: 'content/products'
     create: true
     fields: # The fields for each document, usually in front matter
-      - {label: "SKU", name: "sku", widget: "string"}
+      - {label: "SKU", name: "id", widget: "string"}
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Price", name: "price", widget: "number", valueType: "float", min: 0}
-      - {label: "Image", name: "thumbnail", widget: "image"}
+      - {label: "Image", name: "image", widget: "image", default: "/uploads/lovelee-rolls-logo-square.jpg"}
       - {label: "Description", name: "description", widget: "text"}
