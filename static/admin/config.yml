@@ -1,12 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: thebetternewt/loveleerolls
   branch: master # Branch to update (optional; defaults to master)
   accept_roles: #optional - accepts all users if left out
     - admin
     - editor
 
 publish_mode: editorial_workflow
-media_folder: "/static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
@@ -14,6 +15,7 @@ collections:
     label: 'Products'
     folder: 'content/products'
     create: true
+    slug: '{{slug}}'
     fields: # The fields for each document, usually in front matter
       - {label: "SKU", name: "id", widget: "string"}
       - {label: "Name", name: "title", widget: "string"}
