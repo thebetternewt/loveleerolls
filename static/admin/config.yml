@@ -47,11 +47,10 @@ collections:
       - name: "store"
         label: "Store Settings"
         file: "data/store_settings.yml"
-        description: "General Store Settings"
+        description: "General store settings"
         fields:
           - label: "Unavailable Shipping Dates"
-            name: "unavailable_dates"
-            create: true
-            widget: "list"
+            name: "unavailable dates"
+            widget: list
             fields:
-              - {label: Date, name: date, widget: date}
+              - {label: "Date", name: "date", widget: "date"}
