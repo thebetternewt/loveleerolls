@@ -24,3 +24,44 @@
     });
   }
 </script>
+
+<!-- Snipcart Pickup Dates -->
+<script>
+    // Add data-pickup-dates based on unavailable dates and allowed-pickup-days.
+    // Require moment.js.
+    // ------------------------------------------------------------------------
+
+    // Set today and last day variables.
+    let today = moment();
+    console.log(today.format("dddd, MMM DD, YYYY"))
+
+    // Get date list.
+    let snipcart = document.getElementById("snipcart");
+
+    let pickupDays = snipcart.getAttribute('data-pickup-days').split(', ');
+    console.log(pickupDays);
+    let unavailableDates = snipcart.getAttribute('data-unavailable').split(', ');
+    console.log(unavailableDates);
+
+    // Create array of pretty date strings from dates.
+    let availableDateStrings = [];
+
+    let d = moment(today).add(1, 'day');
+
+    while (d.isBefore(moment(today).add(2, 'month'))) {
+      if (pickupDays.includes(d.day().toString()) // &&
+          // !unavailableDates.includes(d.format("YYYY-MM-DD"))
+        ) {
+        console.log(d.format("dddd, MMM DD, YYYY"))
+        availableDateStrings.push(d.format("dddd, MMM DD, YYYY"));
+      }
+      d.add(1, 'day');
+      console.log(d.format("dddd, MMM DD, YYYY"))
+    }
+
+    console.log(availableDateStrings.toString());
+
+    // Set data-pickup-dates attribute from availableDateStrings array.
+    snipcart.setAttribute('data-cart-custom1-options', availableDateStrings.join(' | '));
+
+  </script>
