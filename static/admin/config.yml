@@ -51,6 +51,7 @@ collections:
         fields:
           - label: "Unavailable Shipping Dates"
             name: "unavailable_dates"
+            create: true
             widget: "list"
             fields:
               - {label: Date, name: date, widget: date}
