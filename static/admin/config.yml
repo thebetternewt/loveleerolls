@@ -51,8 +51,9 @@ collections:
         fields:
           - label: "Unavailable Shipping Dates"
             name: "unavailable dates"
-            widget: "list"
+            widget: list
             field:
               - label: "Date"
                 name: "date"
-                widget: "date"
+                widget: date
+                format: "YYYY-MM-DD"
