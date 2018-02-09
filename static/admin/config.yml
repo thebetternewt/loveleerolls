@@ -37,3 +37,19 @@ collections:
       - label: "Description"
         name: "description"
         widget: "text"
+
+  - name: 'settings'
+    label: 'Settings'
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "store"
+        label: "Store Settings"
+        file: "data/store_settings.yml"
+        description: "General Store Settings"
+        fields:
+          - label: "Unavailable Shipping Dates"
+            name: "unavailable_dates"
+            widget: "list"
+              - {label: Date, name: date, widget: date}
