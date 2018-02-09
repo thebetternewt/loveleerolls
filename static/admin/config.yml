@@ -55,4 +55,4 @@ collections:
             fields:
               - label: "Date"
                 name: "date"
-                widget: "date"}
+                widget: "date"
