@@ -40,14 +40,15 @@ collections:
 
   - name: "settings"
     label: "Settings"
-    file: "content/settings.yml"
-    editor:
-      preview: false
-    fields:
-        - label: "Available Days"
-          name: "available days"
-          widget: list
-          fields:
-            - label: "Date"
-              name: "date"
-              widget: "date"
+    files:
+      - label: "Store Settings"
+        name: "store settings"
+        file: "content/settings.yml"
+        fields:
+          - label: "Available Days"
+            name: "available days"
+            widget: list
+            fields:
+              - label: "Date"
+                name: "date"
+                widget: "date"
