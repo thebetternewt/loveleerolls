@@ -1,6 +1,6 @@
 ---
 id: LC-01
-name: Light Roast LoveLee blend Coffee
+name: Light Roast LoveLee Coffee
 price: '15.00'
 image: /images/coffee-beans.jpg
 description: 1 lb. of savory light roast coffee.
